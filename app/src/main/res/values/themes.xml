@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.OneDayTrip" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Status bar / navigation bar settings for WebView immersion -->
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
+
+    <style name="Theme.OneDayTrip" parent="Base.Theme.OneDayTrip" />
+</resources>

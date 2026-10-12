@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">OneDay Trip</string>
+    <string name="msg_back_press_exit">Press back again to exit.</string>
+    <string name="location_permission_title">Location Service Required</string>
+    <string name="location_permission_message">Please enable device location (GPS) settings to find your current location.</string>
+    <string name="btn_go_settings">Settings</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_confirm">OK</string>
+    <string name="dialog_alert_title">Notice</string>
+    <string name="dialog_error_title">Error</string>
+    <string name="dialog_server_error_title">Server Error</string>
+    <string name="msg_page_load_error">Unable to load the page.</string>
+    <string name="msg_download_start">Starting download.</string>
+    <string name="msg_download_complete">Download complete</string>
+    <string name="msg_download_failed">Download failed</string>
+    <string name="msg_logout_complete">Logged out successfully.</string>
+</resources>

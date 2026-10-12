@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">하루여행</string>
+    <string name="msg_back_press_exit">뒤로가기 버튼을 한 번 더 누르면 종료됩니다.</string>
+    <string name="location_permission_title">위치 서비스 필요</string>
+    <string name="location_permission_message">현재 위치를 확인하려면 기기의 위치(GPS) 설정을 켜주세요.</string>
+    <string name="btn_go_settings">설정으로 이동</string>
+    <string name="btn_cancel">취소</string>
+    <string name="btn_confirm">확인</string>
+    <string name="dialog_alert_title">알림</string>
+    <string name="dialog_error_title">오류</string>
+    <string name="dialog_server_error_title">서버 오류</string>
+    <string name="msg_page_load_error">페이지를 로드할 수 없습니다.</string>
+    <string name="msg_download_start">다운로드를 시작합니다.</string>
+    <string name="msg_download_complete">다운로드 완료</string>
+    <string name="msg_download_failed">다운로드 실패</string>
+    <string name="msg_logout_complete">로그아웃 완료</string>
+</resources>

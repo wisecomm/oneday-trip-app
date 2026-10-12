@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ワンデイトリップ</string>
+    <string name="msg_back_press_exit">もう一度戻るを押すと終了します。</string>
+    <string name="location_permission_title">位置情報サービスが必要</string>
+    <string name="location_permission_message">現在地を確認するには、端末の位置情報(GPS)をONにしてください。</string>
+    <string name="btn_go_settings">設定へ移動</string>
+    <string name="btn_cancel">キャンセル</string>
+    <string name="btn_confirm">確認</string>
+    <string name="dialog_alert_title">お知らせ</string>
+    <string name="dialog_error_title">エラー</string>
+    <string name="dialog_server_error_title">サーバーエラー</string>
+    <string name="msg_page_load_error">ページを読み込めませんでした。</string>
+    <string name="msg_download_start">ダウンロードを開始します。</string>
+    <string name="msg_download_complete">ダウンロード完了</string>
+    <string name="msg_download_failed">ダウンロード失敗</string>
+    <string name="msg_logout_complete">ログアウトしました。</string>
+</resources>
