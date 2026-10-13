@@ -72,3 +72,11 @@ adb reverse tcp:5173 tcp:5173
 ./gradlew bundleRelease
 # 결과물: app/build/outputs/bundle/release/app-release.aab
 ```
+
+---
+
+## 📚 스토어 배포 및 테스트 가이드
+
+- **[스토어 등록 절차 및 애셋 가이드](등록과정/README.md)**
+- **[Android & iOS 테스트 절차 가이드](테스트절차/README.md)** (구글 20명 비공개 테스트 및 iOS TestFlight 완벽 가이드)
+
