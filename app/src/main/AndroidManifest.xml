@@ -7,8 +7,8 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
-    <!-- Firebase Analytics 등이 자동으로 추가하는 광고 ID(AD_ID) 권한 강제 제거 -->
-    <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove" />
+    <!-- Google Play 서비스 광고 ID (Firebase Analytics 연동) -->
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
 
     <!-- Android 11 (API 30)+ 외부 패키지 호출 권한 쿼리 (네이버 지도, 전화, 인텐트 등) -->
     <queries>
