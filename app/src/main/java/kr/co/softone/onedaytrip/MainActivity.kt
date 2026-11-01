@@ -9,12 +9,16 @@ import android.provider.Settings
 import android.util.Log
 import android.webkit.ValueCallback
 import android.webkit.WebView
+import android.widget.FrameLayout
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
+import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
 
@@ -113,11 +117,31 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
 
-        // 1. 웹뷰 인스턴스 생성 및 레이아웃 설정
+        // 1. 상태바 및 노치(카메라 홀), 내비게이션 바 안전 영역(Safe Area)을 위한 컨테이너 래퍼 설정
+        val container = FrameLayout(this).apply {
+            setBackgroundColor(ContextCompat.getColor(this@MainActivity, android.R.color.white))
+        }
         webView = WebView(this)
-        setContentView(webView)
+        container.addView(
+            webView,
+            FrameLayout.LayoutParams(
+                FrameLayout.LayoutParams.MATCH_PARENT,
+                FrameLayout.LayoutParams.MATCH_PARENT
+            )
+        )
+        setContentView(container)
+
+        // 모든 기기(펀치홀, 노치, Android 15+ 엣지투엣지)에서 상단 헤더가 상태바와 겹치지 않도록 Safe Area Insets 패딩 적용
+        ViewCompat.setOnApplyWindowInsetsListener(container) { v, windowInsets ->
+            val insets = windowInsets.getInsets(
+                WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.displayCutout()
+            )
+            v.setPadding(insets.left, insets.top, insets.right, insets.bottom)
+            windowInsets
+        }
 
         // 2. WebViewManager 설정
         val webViewManager = WebViewManager(this, webView) { callback ->
